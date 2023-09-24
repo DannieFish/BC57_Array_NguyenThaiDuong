@@ -22,3 +22,12 @@ document.getElementById('sum_positive').onclick = function () {
     document.getElementById('res_1').innerHTML = sumPositive;
 }
 
+document.getElementById('count_positive').onclick = function () {
+    var countPositive = 0;
+    for (var index = 0; index < mainArray.length; index++){
+        if(mainArray[index] > 0){
+            countPositive++
+        }
+    }
+    document.getElementById('res_2').innerHTML = countPositive;
+}
