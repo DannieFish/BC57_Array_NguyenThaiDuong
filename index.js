@@ -24,10 +24,19 @@ document.getElementById('sum_positive').onclick = function () {
 
 document.getElementById('count_positive').onclick = function () {
     var countPositive = 0;
-    for (var index = 0; index < mainArray.length; index++){
-        if(mainArray[index] > 0){
+    for (var index = 0; index < mainArray.length; index++) {
+        if (mainArray[index] > 0) {
             countPositive++
         }
     }
     document.getElementById('res_2').innerHTML = countPositive;
+}
+document.getElementById('find_min_num').onclick = function () {
+    var minNumber = 0;
+    for (var index = mainArray[0]; index < mainArray.length; index++) {
+        if (mainArray[index] < minNumber) {
+            minNumber = mainArray[index]
+        }
+    }
+    document.getElementById('res_3').innerHTML = minNumber;
 }
