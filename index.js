@@ -7,7 +7,7 @@ document.getElementById('add_number_btn').onclick = function () {
         mainArray.push(0);
 
     } else {
-        mainArray.push(addNum);
+        mainArray.push(Number(addNum));
 
     }
 
@@ -35,8 +35,8 @@ document.getElementById('count_positive').onclick = function () {
     document.getElementById('res_2').innerHTML = countPositive;
 }
 document.getElementById('find_min_num').onclick = function () {
-    var minNumber = 0;
-    for (var index = mainArray[0]; index < mainArray.length; index++) {
+    var minNumber = mainArray[0];
+    for (var index = 0; index < mainArray.length; index++) {
         if (mainArray[index] < minNumber) {
             minNumber = mainArray[index]
         }
@@ -44,5 +44,11 @@ document.getElementById('find_min_num').onclick = function () {
     document.getElementById('res_3').innerHTML = minNumber;
 }
 document.getElementById('min_positive').onclick = function () {
-
-}
+    var minPositive = mainArray[0];
+    for (var index = 0; index < mainArray.length; index++) {
+      if (mainArray[index] > 0 && mainArray[index] < minPositive) {
+        minPositive = mainArray[index];
+      }
+    }
+    document.getElementById('res_4').innerHTML = minPositive;
+  }
