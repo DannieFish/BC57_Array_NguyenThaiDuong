@@ -48,6 +48,8 @@ document.getElementById('min_positive').onclick = function () {
     for (var index = 0; index < mainArray.length; index++) {
         if (mainArray[index] > 0 && mainArray[index] < minPositive) {
             minPositive = mainArray[index];
+        } else if (mainArray[index] <= 0) {
+            alert("Không có số dương")
         }
     }
     document.getElementById('res_4').innerHTML = minPositive;
