@@ -22,7 +22,7 @@ document.getElementById('sum_positive').onclick = function () {
             sumPositive += mainArray[index];
         }
     }
-    document.getElementById('res_1').innerHTML = sumPositive;
+    document.getElementById('res_1').innerHTML = "Tổng số dương là: " + sumPositive;
 }
 
 document.getElementById('count_positive').onclick = function () {
@@ -32,7 +32,7 @@ document.getElementById('count_positive').onclick = function () {
             countPositive++
         }
     }
-    document.getElementById('res_2').innerHTML = countPositive;
+    document.getElementById('res_2').innerHTML = "Có " + countPositive + " số dương";
 }
 document.getElementById('find_min_num').onclick = function () {
     var minNumber = mainArray[0];
@@ -41,7 +41,7 @@ document.getElementById('find_min_num').onclick = function () {
             minNumber = mainArray[index]
         }
     }
-    document.getElementById('res_3').innerHTML = minNumber;
+    document.getElementById('res_3').innerHTML = "Số nhỏ nhất trong mảng là: " + minNumber;
 }
 document.getElementById('min_positive').onclick = function () {
     var minPositive = mainArray[0];
@@ -52,7 +52,7 @@ document.getElementById('min_positive').onclick = function () {
             alert("Không có số dương")
         }
     }
-    document.getElementById('res_4').innerHTML = minPositive;
+    document.getElementById('res_4').innerHTML = "Số dương nhỏ nhất là: " + minPositive;
 }
 document.getElementById('end_even').onclick = function () {
     var nearEndEven;
@@ -66,7 +66,7 @@ document.getElementById('end_even').onclick = function () {
         }
 
     }
-    document.getElementById('res_5').innerHTML = nearEndEven;
+    document.getElementById('res_5').innerHTML = "Số chẵn gần cuối mảng nhất là: " + nearEndEven;
 }
 document.getElementById('switch_element').onclick = function () {
     var numSpot1 = +document.getElementById('change_num1').value;
@@ -80,5 +80,5 @@ document.getElementById('switch_element').onclick = function () {
     // in ra hàm sau khi thay đổi
     indexChange = mainArray;
 
-    document.getElementById('res_6').innerHTML = indexChange;
+    document.getElementById('res_6').innerHTML = "Mảng sau khi đổi chổ: " + indexChange;
 }
