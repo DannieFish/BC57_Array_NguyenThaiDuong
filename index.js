@@ -66,3 +66,17 @@ document.getElementById('end_even').onclick = function () {
     }
     document.getElementById('res_5').innerHTML = nearEndEven;
 }
+document.getElementById('switch_element').onclick = function () {
+    var numSpot1 = +document.getElementById('change_num1').value;
+    var numSpot2 = +document.getElementById('change_num2').value;
+    // giữ lại index1 để tránh spot1 overwrite spot2
+    var indexChange = mainArray[numSpot1];
+    //cho spot2 thế chổ spot1
+    mainArray[numSpot1] = mainArray[numSpot2];
+    //lấy spot1 ra khỏi index1 và bỏ vào spot2
+    mainArray[numSpot2] = indexChange;
+    // in ra hàm sau khi thay đổi
+    indexChange = mainArray;
+
+    document.getElementById('res_6').innerHTML = indexChange;
+}
