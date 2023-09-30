@@ -46,9 +46,23 @@ document.getElementById('find_min_num').onclick = function () {
 document.getElementById('min_positive').onclick = function () {
     var minPositive = mainArray[0];
     for (var index = 0; index < mainArray.length; index++) {
-      if (mainArray[index] > 0 && mainArray[index] < minPositive) {
-        minPositive = mainArray[index];
-      }
+        if (mainArray[index] > 0 && mainArray[index] < minPositive) {
+            minPositive = mainArray[index];
+        }
     }
     document.getElementById('res_4').innerHTML = minPositive;
-  }
+}
+document.getElementById('end_even').onclick = function () {
+    var nearEndEven;
+    for (var indexR = mainArray.length - 1; indexR >= 0; indexR--) {
+        if (mainArray[indexR] % 2 == 0) {
+
+            nearEndEven = mainArray[indexR];
+            break;
+        } else {
+            nearEndEven = -1 + " Không tìm được số chẵn";
+        }
+
+    }
+    document.getElementById('res_5').innerHTML = nearEndEven;
+}
