@@ -97,3 +97,23 @@ document.getElementById('organize_num').onclick = function () {
     //output 
     document.getElementById('res_7').innerHTML = "Array sắp xếp từ nhỏ đến lớn: " + res;
 }
+document.getElementById('prime_num').onclick = function () {
+    var primeNum;
+    var output = true;
+    for (var index = 0; index < mainArray.length; index++) {
+        if (mainArray[index] < 2) {
+            output = false;
+        } else if (mainArray[index] == 2) {
+            primeNum = 2;
+            break;
+        } else if (mainArray[index] % 2 === 0) {
+            output = false;
+        } else {
+            primeNum = mainArray[index];
+            break;
+        }
+    }
+
+
+    document.getElementById('res_8').innerHTML = "Số nguyên tố đầu tiên trong array là: " + primeNum;
+}
