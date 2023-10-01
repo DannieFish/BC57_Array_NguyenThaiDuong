@@ -82,3 +82,18 @@ document.getElementById('switch_element').onclick = function () {
 
     document.getElementById('res_6').innerHTML = "Mảng sau khi đổi chổ: " + indexChange;
 }
+document.getElementById('organize_num').onclick = function () {
+    //học trên lớp
+    var res = mainArray.sort(function (b, a) {
+        //so sánh phần tử thứ nhất với phần tử bên cạnh nó
+        if (b > a) {
+            // nếu phần tử thứ nhất lớn hơn phần tử thứ hai thì thay đổi vị trí cho nhau
+            return 1;
+        } else {
+            // nếu không thì giữ y chang và kiểm tra phần tử khác
+            return -1;
+        }
+    })
+    //output 
+    document.getElementById('res_7').innerHTML = "Array sắp xếp từ nhỏ đến lớn: " + res;
+}
