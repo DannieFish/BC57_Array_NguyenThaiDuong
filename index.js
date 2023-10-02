@@ -107,5 +107,5 @@ document.getElementById('prime_num').onclick = function () {
             return;
         }
     }
-    document.getElementById('res_8').innerHTML = "Không tìm thấy số nguyên tố";
+    document.getElementById('res_8').innerHTML = "Không tìm thấy số nguyên tố: " + -1;
 }
